@@ -34,5 +34,19 @@ class AnimalShelter {
             return dogs.poll();
         }
     }
+    // Method to dequeue the oldest dog
+    public String dequeueDog() {
+        if (dogs.isEmpty()) {
+            throw new IllegalStateException("No dogs available in the shelter.");
+        }
+        return dogs.poll();
+    }
 
+    // Method to dequeue the oldest cat
+    public String dequeueCat() {
+        if (cats.isEmpty()) {
+            throw new IllegalStateException("No cats available in the shelter.");
+        }
+        return cats.poll();
+    }
 }
