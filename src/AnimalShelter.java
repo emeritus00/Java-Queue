@@ -49,4 +49,21 @@ class AnimalShelter {
         }
         return cats.poll();
     }
+
+    // Main method to test the implementation
+    public static void main(String[] args) {
+        AnimalShelter shelter = new AnimalShelter();
+
+        // Enqueue some animals
+        shelter.enqueue("dog");
+        shelter.enqueue("cat");
+        shelter.enqueue("dog");
+        shelter.enqueue("cat");
+
+        // Dequeue operations
+        System.out.println("Adopted: " + shelter.dequeueAny());
+        System.out.println("Adopted: " + shelter.dequeueCat());
+        System.out.println("Adopted: " + shelter.dequeueDog());
+        System.out.println("Adopted: " + shelter.dequeueAny());
+    }
 }
